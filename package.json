@@ -1,0 +1,9 @@
+{
+  "name": "gh-actions-course",
+  "version": "1.0.0",
+  "description": "Simple app to test GitHub Actions",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "bash src/test.sh"
+  }
+}

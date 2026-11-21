@@ -1,1 +1,27 @@
+name: SMART CI
 
+on:
+    push:
+        branches:
+            - main
+            - "feature/**"
+        paths:
+            - "src/**"
+    pull_request:
+        branches:
+            - main        
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: check
+              uses: actions/checkout@v4
+
+            - name: check files
+              run: |
+                echo "Checking files in workspace..."
+                ls -la
+                echo "Structure looks clean!"
+            - name: run tests
+              run: npm test
